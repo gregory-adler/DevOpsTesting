@@ -14,8 +14,8 @@ resource "aws_s3_bucket" "demo" {
     Environment = "Demo"
     ManagedBy   = "Spacelift"
   }
-}
-resource "aws_s3_bucket" "demo2" {
+
+  resource "aws_s3_bucket" "demo2" {
   bucket        = "spacelift-demo-greg2-${random_id.suffix.hex}"
   force_destroy = true
 
@@ -23,32 +23,3 @@ resource "aws_s3_bucket" "demo2" {
     Environment = "Demo"
     ManagedBy   = "Spacelift"
   }
-}
-resource "aws_s3_bucket" "demo3" {
-  bucket        = "spacelift-demo-greg3-${random_id.suffix.hex}"
-  force_destroy = true
-
-  tags = {
-    Environment = "Demo"
-    ManagedBy   = "Spacelift"
-  }
-}
-
-resource "aws_s3_bucket" "demo4" {
-  bucket        = "spacelift-demo-greg4-${random_id.suffix.hex}"
-  force_destroy = true
-
-  tags = {
-    Environment = "Demo"
-    ManagedBy   = "Spacelift"
-  }
-}
-resource "aws_s3_bucket" "demo5" {
-  bucket        = "spacelift-demo-greg5-${random_id.suffix.hex}"
-  force_destroy = true
-
-  tags = {
-    Environment = "Demo"
-    ManagedBy   = "Spacelift"
-  }
-}
