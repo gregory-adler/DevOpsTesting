@@ -24,3 +24,12 @@ resource "aws_s3_bucket" "demo2" {
     ManagedBy   = "Spacelift"
   }
 }
+resource "aws_s3_bucket" "demo3" {
+  bucket        = "spacelift-demo-greg3-${random_id.suffix.hex}"
+  force_destroy = true
+
+  tags = {
+    Environment = "Demo"
+    ManagedBy   = "Spacelift"
+  }
+}
