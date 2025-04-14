@@ -35,7 +35,7 @@ resource "aws_s3_bucket" "demo3" {
   }
 }
 resource "aws_s3_bucket" "demo4" {
-  bucket        = "spacelift-demo-greg3-${random_id.suffix.hex}"
+  bucket        = "spacelift-demo-greg4-${random_id.suffix.hex}"
   force_destroy = true
 
   tags = {
